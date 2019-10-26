@@ -1,5 +1,8 @@
 :root {
-  --primary-colour: #bfd8d2;
+  --colour-one: #bfd8d2;
+  --colour-two: #fedcd2;
+  --colour-three: #df744a;
+  --colour-four: #dcb239;
 }
 
 .App {
@@ -26,7 +29,6 @@ a:hover {
   position: fixed;
   top: 0px;
   font-weight: bold;
-  font-size: 1.3rem;
   padding-top: 20px;
 }
 
@@ -34,19 +36,25 @@ a:hover {
   margin-left: 100px;
 }
 
+.Header-Left > a {
+  font-size: 1.3rem;
+}
+
 .Header-Right {
   margin-right: 100px;
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .Header-Right > a {
   margin-left: 50px;
+  font-size: 1.1rem;
 }
 
 .Top {
-  background-color: var(--primary-colour);
+  background-color: var(--colour-one);
   width: 100%;
   height: 100vh;
   justify-content: center;
@@ -77,10 +85,13 @@ a:hover {
 
 .Top-Inner-Right > h1 {
   font-size: 5rem;
+  font-weight: bold;
 }
 
 .Top-Inner-Right > h2 {
   font-size: 2rem;
+  color: grey;
+  font-weight: normal;
 }
 
 .test {
