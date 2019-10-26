@@ -1,25 +1,33 @@
 import React from "react";
-import logo from "../Resources/logo.svg";
+import ray from "../Resources/ray.jpg";
 import "../Styling/App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Header">
+        <div className="Header-Left">
+          <a>iBlind</a>
+        </div>
+        <div className="Header-Right">
+          <a>About</a>
+          <a>Team</a>
+          <a>Contact</a>
+          <a>News</a>
+        </div>
+      </div>
+      <div className="Top">
+        <div className="Top-Inner">
+          <div className="Top-Inner-Left">
+            <img src={ray} />
+          </div>
+          <div className="Top-Inner-Right">
+            <h1>iBlind</h1>
+            <h2>2 Blind 2 Furious</h2>
+          </div>
+        </div>
+      </div>
+      <div className="test">test</div>
     </div>
   );
 }

@@ -1,22 +1,88 @@
+:root {
+  --primary-colour: #bfd8d2;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+h1,
+h2,
+h3,
+a {
+  margin: 0px;
+  padding: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.Header {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  position: fixed;
+  top: 0px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding-top: 20px;
+}
+
+.Header-Left {
+  margin-left: 100px;
+}
+
+.Header-Right {
+  margin-right: 100px;
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.Header-Right > a {
+  margin-left: 50px;
+}
+
+.Top {
+  background-color: var(--primary-colour);
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+}
+
+.Top-Inner {
+  display: flex;
+  flex-direction: row;
+  padding-top: 35vh;
+}
+
+.Top-Inner-Left {
+  margin-left: 20vw;
+  padding-right: 100px;
+}
+
+.Top-Inner-Left > img {
+  width: 20vw;
+  border-radius: 5px;
+}
+
+.Top-Inner-Right {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-right: 20vw;
+  align-items: flex-start;
 }
 
-.App-link {
-  color: #09d3ac;
+.Top-Inner-Right > h1 {
+  font-size: 5rem;
+}
+
+.Top-Inner-Right > h2 {
+  font-size: 2rem;
+}
+
+.test {
+  height: 1000px;
 }
