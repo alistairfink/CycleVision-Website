@@ -62,36 +62,29 @@ a:hover {
 
 .Top-Inner {
   display: flex;
-  flex-direction: row;
-  padding-top: 35vh;
-}
-
-.Top-Inner-Left {
-  margin-left: 20vw;
-  padding-right: 100px;
-}
-
-.Top-Inner-Left > img {
-  width: 20vw;
-  border-radius: 5px;
-}
-
-.Top-Inner-Right {
-  display: flex;
   flex-direction: column;
-  margin-right: 20vw;
-  align-items: flex-start;
+  padding-top: 15vh;
 }
 
-.Top-Inner-Right > h1 {
+.Top-Inner > h1 {
   font-size: 5rem;
   font-weight: bold;
 }
 
-.Top-Inner-Right > h2 {
+.Top-Inner > h2 {
   font-size: 2rem;
   color: grey;
   font-weight: normal;
+}
+
+.Top-Inner-Img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 60vh;
 }
 
 .test {

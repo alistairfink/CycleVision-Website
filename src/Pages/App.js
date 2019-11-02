@@ -1,5 +1,5 @@
 import React from "react";
-import ray from "../Resources/ray.jpg";
+import meh from "../Resources/meh.png";
 import "../Styling/App.css";
 
 function App() {
@@ -18,14 +18,13 @@ function App() {
       </div>
       <div className="Top">
         <div className="Top-Inner">
-          <div className="Top-Inner-Left">
-            <img src={ray} />
-          </div>
-          <div className="Top-Inner-Right">
-            <h1>iBlind</h1>
-            <h2>2 Blind 2 Furious</h2>
-          </div>
+          <h1>iBlind</h1>
+          <h2>A Better Way to Bike</h2>
         </div>
+        <img className="Top-Inner-Img" src={meh}/>
+      </div>
+      <div className="Section">
+        
       </div>
       <div className="test">test</div>
     </div>
