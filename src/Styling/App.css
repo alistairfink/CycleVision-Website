@@ -3,6 +3,7 @@
   --colour-two: #fedcd2;
   --colour-three: #df744a;
   --colour-four: #dcb239;
+  --colour-four-dark: #c9a134;
 }
 
 .App {
@@ -110,4 +111,89 @@ a:hover {
 .Team-Member > img {
   width: 180px;
   border-radius: 100px;
+}
+
+.Contact-Field {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30vw;
+  margin-right: 30vw;
+  justify-content: flex-start;
+  margin-top: 0px;
+}
+
+.Contact-Field > p {
+  align-self: flex-start;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+}
+
+.Contact-Field > input {
+  margin: 0px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 3px;
+  border-style: none;
+  font-family: sans-serif;
+}
+
+.Contact-Field > textarea {
+  height: 200px;
+  margin: 0px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 3px;
+  border-style: none;
+  font-family: sans-serif;
+  resize: none;
+}
+
+.Contact {
+  padding-bottom: 100px;
+}
+
+.Contact > button {
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: sans-serif;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: var(--colour-four);
+  border-style: none;
+}
+
+.Contact > button:hover {
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: sans-serif;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: var(--colour-four-dark);
+  cursor: pointer;
+  border-style: none;
+}
+
+.Contact-Email-Shown {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: var(--colour-three);
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.Contact-Email-Hidden {
+  position: fixed;
+  transition: all 0.2s ease-in-out;
+  bottom: 0;
+  right: 0;
 }

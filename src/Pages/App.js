@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import meh from "../Resources/meh.png";
 import Sergio from "../Resources/Sergio.png";
 import Alistair from "../Resources/Alistair.png";
@@ -8,6 +8,51 @@ import Zaki from "../Resources/Zaki.png";
 import "../Styling/App.css";
 
 function App() {
+  const [emailerName, setEmailerName] = useState("");
+  const [emailerEmail, setEmailerEmail] = useState("");
+  const [emailerSubject, setEmailerSubject] = useState("");
+  const [emailerMessage, setEmailerMessage] = useState("");
+  const [emailerSuccess, setEmailerSuccess] = useState(false);
+  const [emailerSuccessMessage, setEmailerSuccessMessage] = useState("");
+
+  const sendEmail = () => {
+    if (
+      emailerName == "" ||
+      emailerSubject == "" ||
+      emailerSubject == "" ||
+      emailerMessage == ""
+    ) {
+      setEmailerSuccessMessage("All Fields Required.");
+      setEmailerSuccess(true);
+      setTimeout(() => {
+        setEmailerSuccess(false);
+        setEmailerSuccessMessage("");
+      }, 1500);
+    } else {
+      fetch(
+        "https://us-central1-stoked-flame-246007.cloudfunctions.net/iBlind-Emailer",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            name: emailerName,
+            email: emailerEmail,
+            subject: emailerSubject,
+            message: emailerMessage
+          })
+        }
+      )
+        .then(response => response.text())
+        .then(responseJson => {
+          setEmailerSuccessMessage(responseJson);
+          setEmailerSuccess(true);
+          setTimeout(() => {
+            setEmailerSuccess(false);
+            setEmailerSuccessMessage("");
+          }, 1500);
+        });
+    }
+  };
+
   return (
     <div className="App">
       <div className="Header">
@@ -29,7 +74,7 @@ function App() {
         <img className="Top-Inner-Img" src={meh} />
       </div>
       <div className="Section">
-        <h2>About iBline</h2>
+        <h2>About iBlind</h2>
       </div>
       <div className="Section">
         <h2>Team</h2>
@@ -56,8 +101,48 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="Section">
+      <div className="Section Contact">
         <h2>Contact</h2>
+        <div className="Contact-Field">
+          <input
+            type="text"
+            value={emailerName}
+            placeholder="Name"
+            onChange={e => setEmailerName(e.target.value)}
+          />
+        </div>
+        <div className="Contact-Field">
+          <input
+            type="text"
+            value={emailerEmail}
+            placeholder="Email"
+            onChange={e => setEmailerEmail(e.target.value)}
+          />
+        </div>
+        <div className="Contact-Field">
+          <input
+            type="text"
+            value={emailerSubject}
+            placeholder="Subject"
+            onChange={e => setEmailerSubject(e.target.value)}
+          />
+        </div>
+        <div className="Contact-Field">
+          <textarea
+            type="text"
+            value={emailerMessage}
+            placeholder="Message"
+            onChange={e => setEmailerMessage(e.target.value)}
+          />
+        </div>
+        <button onClick={() => sendEmail()}>Send</button>
+      </div>
+      <div
+        className={
+          emailerSuccess ? "Contact-Email-Shown" : "Contact-Email-Hidden"
+        }
+      >
+        <h3>{emailerSuccessMessage}</h3>
       </div>
     </div>
   );
