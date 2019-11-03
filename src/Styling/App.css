@@ -15,6 +15,7 @@ h2,
 a {
   margin: 0px;
   padding: 0px;
+  font-family: sans-serif;
 }
 
 a:hover {
@@ -94,6 +95,7 @@ a:hover {
 .Section > h2 {
   font-size: 2rem;
   padding-bottom: 30px;
+  padding-top: 100px;
 }
 
 .Team {
@@ -111,6 +113,10 @@ a:hover {
 .Team-Member > img {
   width: 180px;
   border-radius: 100px;
+}
+
+.Team-Member > h3 {
+  font-size: 1.3rem;
 }
 
 .Contact-Field {
@@ -170,7 +176,6 @@ a:hover {
   padding: 10px;
   padding-left: 30px;
   padding-right: 30px;
-  font-family: sans-serif;
   font-size: 1rem;
   border-radius: 5px;
   background-color: var(--colour-four-dark);
@@ -196,4 +201,8 @@ a:hover {
   transition: all 0.2s ease-in-out;
   bottom: 0;
   right: 0;
+}
+
+.Contact-Loading {
+  width: 60px;
 }

@@ -5,6 +5,7 @@ import Alistair from "../Resources/Alistair.png";
 import Elijah from "../Resources/Elijah.png";
 import Skye from "../Resources/Skye.png";
 import Zaki from "../Resources/Zaki.png";
+import Loading from "../Resources/loading.svg";
 import "../Styling/App.css";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   const [emailerSubject, setEmailerSubject] = useState("");
   const [emailerMessage, setEmailerMessage] = useState("");
   const [emailerSuccess, setEmailerSuccess] = useState(false);
+  const [emailerLoading, setEmailerLoading] = useState(false);
   const [emailerSuccessMessage, setEmailerSuccessMessage] = useState("");
 
   const sendEmail = () => {
@@ -29,6 +31,7 @@ function App() {
         setEmailerSuccessMessage("");
       }, 1500);
     } else {
+      setEmailerLoading(true);
       fetch(
         "https://us-central1-stoked-flame-246007.cloudfunctions.net/iBlind-Emailer",
         {
@@ -45,6 +48,7 @@ function App() {
         .then(responseJson => {
           setEmailerSuccessMessage(responseJson);
           setEmailerSuccess(true);
+          setEmailerLoading(false);
           setTimeout(() => {
             setEmailerSuccess(false);
             setEmailerSuccessMessage("");
@@ -103,6 +107,10 @@ function App() {
       </div>
       <div className="Section Contact">
         <h2>Contact</h2>
+        <p>
+          Contact us using the contact form below or by emailing us at
+          sergiorodriguez2003@gmail.com.
+        </p>
         <div className="Contact-Field">
           <input
             type="text"
@@ -135,7 +143,11 @@ function App() {
             onChange={e => setEmailerMessage(e.target.value)}
           />
         </div>
-        <button onClick={() => sendEmail()}>Send</button>
+        {emailerLoading ? (
+          <img className="Contact-Loading" src={Loading} />
+        ) : (
+          <button onClick={() => sendEmail()}>Send</button>
+        )}
       </div>
       <div
         className={
