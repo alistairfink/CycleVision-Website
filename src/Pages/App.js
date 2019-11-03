@@ -19,10 +19,10 @@ function App() {
 
   const sendEmail = () => {
     if (
-      emailerName == "" ||
-      emailerSubject == "" ||
-      emailerSubject == "" ||
-      emailerMessage == ""
+      emailerName === "" ||
+      emailerSubject === "" ||
+      emailerSubject === "" ||
+      emailerMessage === ""
     ) {
       setEmailerSuccessMessage("All Fields Required.");
       setEmailerSuccess(true);
@@ -75,7 +75,7 @@ function App() {
           <h1>iBlind</h1>
           <h2>A Better Way to Bike</h2>
         </div>
-        <img className="Top-Inner-Img" src={meh} />
+        <img className="Top-Inner-Img" alt="Top Product" src={meh} />
       </div>
       <div className="Section">
         <h2>About iBlind</h2>
@@ -84,23 +84,23 @@ function App() {
         <h2>Team</h2>
         <div className="Team">
           <div className="Team-Member">
-            <img src={Alistair} />
+            <img src={Alistair} alt="Alistair Fink Profile" />
             <h3>Alistair Fink</h3>
           </div>
           <div className="Team-Member">
-            <img src={Elijah} />
+            <img src={Elijah} alt="Elijah Erb Profile" />
             <h3>Elijah Erb</h3>
           </div>
           <div className="Team-Member">
-            <img src={Sergio} />
+            <img src={Sergio} alt="Sergio Rodriguez Profile" />
             <h3>Sergio Rodriguez</h3>
           </div>
           <div className="Team-Member">
-            <img src={Skye} />
+            <img src={Skye} alt="Skye HoSue Profile" />
             <h3>Skye HoSue</h3>
           </div>
           <div className="Team-Member">
-            <img src={Zaki} />
+            <img src={Zaki} alt="Zaki Ahmed Profile" />
             <h3>Zaki Ahmed</h3>
           </div>
         </div>
@@ -144,7 +144,11 @@ function App() {
           />
         </div>
         {emailerLoading ? (
-          <img className="Contact-Loading" src={Loading} />
+          <img
+            className="Contact-Loading"
+            src={Loading}
+            alt="Send Email Loading"
+          />
         ) : (
           <button onClick={() => sendEmail()}>Send</button>
         )}
