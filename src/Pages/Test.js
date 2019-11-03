@@ -1,7 +1,7 @@
 import React from "react";
 
 function Test() {
-	return <div>Test</div>;
+	return <div>YEET</div>;
 }
 
 export default Test;
