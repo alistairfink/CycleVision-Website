@@ -3,9 +3,9 @@ import { HashLink as Link } from "react-router-hash-link";
 import meh from "../Resources/meh.png";
 import Sergio from "../Resources/Sergio.png";
 import Alistair from "../Resources/Alistair.png";
-import Elijah from "../Resources/Elijah.png";
-import Skye from "../Resources/Skye.png";
-import Zaki from "../Resources/Zaki.png";
+import Elijah from "../Resources/Elijah.jpg";
+import Skye from "../Resources/Skye.jpg";
+import Zaki from "../Resources/Zaki.jpg";
 import Loading from "../Resources/loading.svg";
 import "../Styling/Home.css";
 
@@ -97,22 +97,27 @@ function Home() {
           <div className="Team-Member">
             <img src={Alistair} alt="Alistair Fink Profile" />
             <h3>Alistair Fink</h3>
+            <h4>Software Engineer</h4>
           </div>
           <div className="Team-Member">
             <img src={Elijah} alt="Elijah Erb Profile" />
             <h3>Elijah Erb</h3>
+            <h4>Mechanical Engineer</h4>
           </div>
           <div className="Team-Member">
             <img src={Sergio} alt="Sergio Rodriguez Profile" />
             <h3>Sergio Rodriguez</h3>
+            <h4>Electrical Engineer</h4>
           </div>
           <div className="Team-Member">
             <img src={Skye} alt="Skye HoSue Profile" />
             <h3>Skye HoSue</h3>
+            <h4>Mascot</h4>
           </div>
           <div className="Team-Member">
             <img src={Zaki} alt="Zaki Ahmed Profile" />
             <h3>Zaki Ahmed</h3>
+            <h4>Software Engineer</h4>
           </div>
         </div>
       </div>

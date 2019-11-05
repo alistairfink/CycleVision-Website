@@ -122,6 +122,13 @@ a:hover {
 
 .Team-Member > h3 {
   font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.Team-Member > h4 {
+  font-size: 1rem;
+  color: grey;
+  margin-top: 0px;
 }
 
 .Contact-Field {

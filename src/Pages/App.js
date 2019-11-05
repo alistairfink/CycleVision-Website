@@ -5,7 +5,7 @@ import Test from "./Test.js";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/iblind">
       <div>
         <Route exact path="/" component={Home} />
         <Route exact path="/Portfolio" component={Test} />
