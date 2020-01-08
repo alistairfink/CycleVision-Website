@@ -10,7 +10,6 @@ import Loading from "../Resources/loading.svg";
 import "../Styling/Home.css";
 
 function Home() {
-
   return (
     <div className="App">
       <div className="Header">
@@ -29,8 +28,8 @@ function Home() {
           <Link smooth to="#contact" className="HashLink">
             Contact
           </Link>
-          <Link to="/portfolio" className="HashLink">
-            News
+          <Link to="/blog" className="HashLink">
+            Blog
           </Link>
         </div>
       </div>

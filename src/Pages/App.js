@@ -4,14 +4,14 @@ import Home from "./Home.js";
 import Test from "./Test.js";
 
 function App() {
-  return (
-    <Router basename="/iblind">
-      <div>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/Portfolio" component={Test} />
-      </div>
-    </Router>
-  );
+	return (
+		<Router basename="/iblind">
+			<div>
+				<Route exact path="/" component={Home} />
+				<Route exact path="/blog" component={Test} />
+			</div>
+		</Router>
+	);
 }
 
 export default App;
