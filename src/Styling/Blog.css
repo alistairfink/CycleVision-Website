@@ -1,3 +1,8 @@
+.Blog-Outer {
+	background-color: var(--colour-one);
+	min-height: 100vh;
+}
+
 .Blog {
 }
 

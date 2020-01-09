@@ -8,6 +8,7 @@ import Skye from "../Resources/Skye.jpg";
 import Zaki from "../Resources/Zaki.jpg";
 import Loading from "../Resources/loading.svg";
 import "../Styling/Home.css";
+import "../Styling/Colours.css";
 
 function Home() {
   return (
