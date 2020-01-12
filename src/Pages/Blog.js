@@ -8,10 +8,10 @@ import BlogContent from "../Data/BlogContent.js";
 import NavBarStyleHelper from "../Styling/NavBarStyling.js";
 
 function Blog() {
-  const [NavBarStyle, setNavBarStyle] = useState(NavBarStyleHelper(0));
-  useScrollPosition(({ prevPos, currPos }) => {
-    setNavBarStyle(NavBarStyleHelper(currPos.y, window.innerHeight));
-  });
+	const [NavBarStyle, setNavBarStyle] = useState(NavBarStyleHelper(0));
+	useScrollPosition(({ prevPos, currPos }) => {
+		setNavBarStyle(NavBarStyleHelper(currPos.y, window.innerHeight));
+	});
 
 	return (
 		<div className="Blog-Outer">

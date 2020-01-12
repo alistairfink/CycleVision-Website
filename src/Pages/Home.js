@@ -11,6 +11,7 @@ import Loading from "../Resources/loading.svg";
 import "../Styling/Home.css";
 import "../Styling/Colours.css";
 import "../Styling/Header.css";
+import BlogContent from "../Data/BlogContent.js";
 import NavBarStyleHelper from "../Styling/NavBarStyling.js";
 
 function Home() {
@@ -51,6 +52,7 @@ function Home() {
       </div>
       <About />
       <Team />
+      <Blog />
       <Contact />
       <div className="Footer">
         <Link smooth to="#home" className="HashLink">
@@ -111,6 +113,20 @@ function Team() {
           <h3>Zaki Ahmed</h3>
           <h4>Software Engineer</h4>
         </div>
+      </div>
+    </div>
+  );
+}
+
+function Blog() {
+  return (
+    <div className="Blog">
+      <div className="Blog-Inner">
+        <h2>Latest Blog Entry</h2>
+        <h3>{BlogContent[0].Title}</h3>
+        <Link to="/blog" className="HashLink">
+          Blog
+        </Link>
       </div>
     </div>
   );
