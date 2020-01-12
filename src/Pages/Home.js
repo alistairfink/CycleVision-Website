@@ -90,7 +90,10 @@ function About() {
         </div>
         <div className="About-Content">
           <h2>Be Safe</h2>
-          <h3>With the iBlind rear module you can bike safer using the built in turning indicator lights and always on red indicator.</h3>
+          <h3>
+            With the iBlind rear module you can bike safer using the built in
+            turning indicator lights and always on red indicator.
+          </h3>
         </div>
       </div>
       <div className="About-Row-Reverse About-Section">
@@ -99,7 +102,11 @@ function About() {
         </div>
         <div className="About-Content">
           <h2>Be Aware</h2>
-          <h3>With the iBlind front module you can be more ware of your surroundings. The cameras built into the rear module allow the red indicators to notify you of rear approaching vehicles.</h3>
+          <h3>
+            With the iBlind front module you can be more ware of your
+            surroundings. The cameras built into the rear module allow the red
+            indicators to notify you of rear approaching vehicles.
+          </h3>
         </div>
       </div>
       <div className="About-Row About-Section">
@@ -108,7 +115,11 @@ function About() {
         </div>
         <div className="About-Content">
           <h2>Be In Control</h2>
-          <h3>The iBlind turn signal switch allows you to gain total control over your ride by allowing you to actively signal turns without taking your hands off the handles.</h3>
+          <h3>
+            The iBlind turn signal switch allows you to gain total control over
+            your ride by allowing you to actively signal turns without taking
+            your hands off the handles.
+          </h3>
         </div>
       </div>
       <div className="About-Row-Reverse About-Section">
@@ -117,7 +128,11 @@ function About() {
         </div>
         <div className="About-Content">
           <h2>Maximise Usability</h2>
-          <h3>With the iBlind companion app you can maximise iBlind's usability by allowing you to directly access the rear camera while simultaneously allow you to use your phone for navigation.</h3>
+          <h3>
+            With the iBlind companion app you can maximise iBlind's usability by
+            allowing you to directly access the rear camera while simultaneously
+            allow you to use your phone for navigation.
+          </h3>
         </div>
       </div>
       <div className="About-Row About-Section">
@@ -126,7 +141,10 @@ function About() {
         </div>
         <div className="About-Content">
           <h2>Maximise Potential</h2>
-          <h3>The iBlind companion app tracks your riding statistics allowing you to actively analyze and improve your cycling.</h3>
+          <h3>
+            The iBlind companion app tracks your riding statistics allowing you
+            to actively analyze and improve your cycling.
+          </h3>
         </div>
       </div>
     </div>
