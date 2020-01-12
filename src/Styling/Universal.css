@@ -35,3 +35,15 @@
   margin-left: 50px;
   font-size: 1.1rem;
 }
+
+.Footer {
+  background-color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.Footer > a {
+  margin-right: 15px;
+  margin-left: 15px;
+  color: grey;
+}

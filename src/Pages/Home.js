@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import meh from "../Resources/meh.png";
@@ -11,7 +11,7 @@ import Loading from "../Resources/loading.svg";
 import NewsIcon from "../Resources/NewsIcon-Transparent.png";
 import "../Styling/Home.css";
 import "../Styling/Colours.css";
-import "../Styling/Header.css";
+import "../Styling/Universal.css";
 import NewsContent from "../Data/NewsContent.js";
 import NavBarStyleHelper from "../Styling/NavBarStyling.js";
 import FrontModule from "../Resources/FrontModule.png";
@@ -22,6 +22,11 @@ import RideSummary from "../Resources/RideSummary.png";
 
 function Home() {
   const [NavBarStyle, setNavBarStyle] = useState(NavBarStyleHelper(0));
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useScrollPosition(({ prevPos, currPos }) => {
     setNavBarStyle(NavBarStyleHelper(currPos.y, window.innerHeight));
   });

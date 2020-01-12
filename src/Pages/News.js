@@ -1,20 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import "../Styling/News.css";
-import "../Styling/Header.css";
+import "../Styling/Universal.css";
 import "../Styling/Colours.css";
 import NewsContent from "../Data/NewsContent.js";
 import NavBarStyleHelper from "../Styling/NavBarStyling.js";
 
 function News() {
 	const [NavBarStyle, setNavBarStyle] = useState(NavBarStyleHelper(0));
+	const NewsHeader = useRef(null);
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	useScrollPosition(({ prevPos, currPos }) => {
-		setNavBarStyle(NavBarStyleHelper(currPos.y, window.innerHeight));
+		setNavBarStyle(
+			NavBarStyleHelper(currPos.y, NewsHeader.current.clientHeight)
+		);
 	});
 
 	return (
-		<div className="News-Outer">
+		<div>
 			<div className="Header" style={NavBarStyle}>
 				<div className="Header-Left">
 					<Link to="/" className="HashLink">
@@ -22,10 +30,19 @@ function News() {
 					</Link>
 				</div>
 			</div>
-			<h1>iBlind News</h1>
-			{NewsContent.map(post => (
-				<NewsPost Post={post} />
-			))}
+			<div ref={NewsHeader} className="News-Header">
+				<h1>News</h1>
+			</div>
+			<div className="News-Body">
+				{NewsContent.map((post, index) => (
+					<NewsPost Post={post} key={index}/>
+				))}
+			</div>
+			<div className="Footer">
+        <Link to="/" className="HashLink">
+          Home
+        </Link>
+      </div>
 		</div>
 	);
 }

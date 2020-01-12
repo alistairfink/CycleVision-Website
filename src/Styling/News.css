@@ -1,6 +1,18 @@
-.News-Outer {
+.News-Header {
 	background-color: var(--colour-one);
-	min-height: 100vh;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	padding-left: 100px;
+}
+
+.News-Header > h1 {
+	color: var(--colour-two);
+	font-size: 5rem;
+}
+
+.News-Body {
+	background-color: var(--colour-two);
+	height: 2000px;
 }
 
 .News {
