@@ -180,3 +180,14 @@ a:hover {
 .Contact-Loading {
   width: 60px;
 }
+
+.Footer {
+  background-color: white;
+  padding: 15px;
+}
+
+.Footer > a {
+  margin-right: 25px;
+  margin-left: 25px;
+  color: grey;
+}

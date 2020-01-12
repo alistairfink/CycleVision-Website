@@ -52,6 +52,23 @@ function Home() {
       <About />
       <Team />
       <Contact />
+      <div className="Footer">
+        <Link smooth to="#home" className="HashLink">
+          Top
+        </Link>
+        <Link smooth to="#about" className="HashLink">
+          About
+        </Link>
+        <Link smooth to="#team" className="HashLink">
+          Team
+        </Link>
+        <Link smooth to="#contact" className="HashLink">
+          Contact
+        </Link>
+        <Link to="/blog" className="HashLink">
+          Blog
+        </Link>
+      </div>
     </div>
   );
 }
@@ -151,10 +168,6 @@ function Contact() {
   return (
     <div className="Section Contact" id="contact">
       <h2>Contact</h2>
-      <p>
-        Contact us using the contact form below or by emailing us at
-        sergiorodriguez2003@gmail.com.
-      </p>
       <div className="Contact-Field">
         <input
           type="text"
