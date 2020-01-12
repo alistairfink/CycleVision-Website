@@ -11,7 +11,7 @@ import Loading from "../Resources/loading.svg";
 import "../Styling/Home.css";
 import "../Styling/Colours.css";
 import "../Styling/Header.css";
-import BlogContent from "../Data/BlogContent.js";
+import NewsContent from "../Data/NewsContent.js";
 import NavBarStyleHelper from "../Styling/NavBarStyling.js";
 
 function Home() {
@@ -38,8 +38,8 @@ function Home() {
           <Link smooth to="#contact" className="HashLink">
             Contact
           </Link>
-          <Link to="/blog" className="HashLink">
-            Blog
+          <Link to="/news" className="HashLink">
+            News
           </Link>
         </div>
       </div>
@@ -52,7 +52,7 @@ function Home() {
       </div>
       <About />
       <Team />
-      <Blog />
+      <LatestNews />
       <Contact />
       <div className="Footer">
         <Link smooth to="#home" className="HashLink">
@@ -67,8 +67,8 @@ function Home() {
         <Link smooth to="#contact" className="HashLink">
           Contact
         </Link>
-        <Link to="/blog" className="HashLink">
-          Blog
+        <Link to="/news" className="HashLink">
+          News
         </Link>
       </div>
     </div>
@@ -118,14 +118,14 @@ function Team() {
   );
 }
 
-function Blog() {
+function LatestNews() {
   return (
-    <div className="Blog">
-      <div className="Blog-Inner">
-        <h2>Latest Blog Entry</h2>
-        <h3>{BlogContent[0].Title}</h3>
-        <Link to="/blog" className="HashLink">
-          Blog
+    <div className="LatestNews">
+      <div className="LatestNews-Inner">
+        <h2>Latest News Entry</h2>
+        <h3>{NewsContent[0].Title}</h3>
+        <Link to="/news" className="HashLink">
+          News
         </Link>
       </div>
     </div>

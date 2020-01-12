@@ -1,12 +1,12 @@
 module.exports = [
 	{
-		Title: "Title",
+		Title: "Bankruptcy Announcement",
 		Content: "Content",
 		Date: new Date("November 18, 1923"),
 		Images: []
 	},
 	{
-		Title: "Title2",
+		Title: "Website is Live",
 		Content: "Content2",
 		Date: new Date("January 12, 2020"),
 		Images: []

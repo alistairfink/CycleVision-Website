@@ -1,13 +1,13 @@
-.Blog-Outer {
+.News-Outer {
 	background-color: var(--colour-one);
 	min-height: 100vh;
 }
 
-.Blog {
+.News {
 }
 
-Blog-Date {
+.News-Date {
 }
 
-.Blog-Content {
+.News-Content {
 }
