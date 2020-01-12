@@ -8,6 +8,7 @@ import Elijah from "../Resources/Elijah.jpg";
 import Skye from "../Resources/Skye.jpg";
 import Zaki from "../Resources/Zaki.jpg";
 import Loading from "../Resources/loading.svg";
+import NewsIcon from "../Resources/NewsIcon-Transparent.png";
 import "../Styling/Home.css";
 import "../Styling/Colours.css";
 import "../Styling/Header.css";
@@ -121,11 +122,14 @@ function Team() {
 function LatestNews() {
   return (
     <div className="LatestNews">
-      <div className="LatestNews-Inner">
-        <h2>Latest News Entry</h2>
+      <div className="LatestNews-Left">
+        <img src={NewsIcon} alt="Latest News" />
+      </div>
+      <div className="LatestNews-Right">
+        <h2>Latest News</h2>
         <h3>{NewsContent[0].Title}</h3>
-        <Link to="/news" className="HashLink">
-          News
+        <Link to="/news" className="LatestNews-Button">
+          All News
         </Link>
       </div>
     </div>
@@ -183,7 +187,7 @@ function Contact() {
 
   return (
     <div className="Section Contact" id="contact">
-      <h2>Contact</h2>
+      <h2>Contact Us</h2>
       <div className="Contact-Field">
         <input
           type="text"
