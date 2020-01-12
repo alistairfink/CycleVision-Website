@@ -15,47 +15,15 @@ a:hover {
   text-decoration: underline;
 }
 
-.HashLink {
-  text-decoration: none;
-  color: black;
-}
-
-.Header {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  position: fixed;
-  top: 0px;
-  font-weight: bold;
-  padding-top: 20px;
-}
-
-.Header-Left {
-  margin-left: 100px;
-}
-
-.Header-Left > a {
-  font-size: 1.3rem;
-}
-
-.Header-Right {
-  margin-right: 100px;
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.Header-Right > a {
-  margin-left: 50px;
-  font-size: 1.1rem;
-}
-
 .Top {
   background-color: var(--colour-one);
   width: 100%;
   height: 100vh;
   justify-content: center;
+  -webkit-box-shadow: 0px -5px 30px 15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -5px 30px 15px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px -5px 30px 15px rgba(0, 0, 0, 0.75);
+  position: relative;
 }
 
 .Top-Inner {
@@ -66,12 +34,14 @@ a:hover {
 
 .Top-Inner > h1 {
   font-size: 5rem;
+  color: var(--colour-two);
   font-weight: bold;
 }
 
 .Top-Inner > h2 {
   font-size: 2rem;
-  color: grey;
+  color: var(--colour-two);
+  opacity: 0.65;
   font-weight: normal;
 }
 
@@ -86,7 +56,7 @@ a:hover {
 }
 
 .Section {
-  background-color: lightgrey;
+  background-color: var(--colour-two);
 }
 
 .Section > h2 {
@@ -103,8 +73,8 @@ a:hover {
 }
 
 .Team-Member {
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .Team-Member > img {
@@ -119,7 +89,7 @@ a:hover {
 
 .Team-Member > h4 {
   font-size: 1rem;
-  color: grey;
+  opacity: 0.65;
   margin-top: 0px;
 }
 
@@ -162,13 +132,13 @@ a:hover {
 }
 
 .Contact {
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 
 .Contact > button {
   padding: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
   font-family: sans-serif;
   font-size: 1rem;
   border-radius: 5px;
@@ -178,8 +148,8 @@ a:hover {
 
 .Contact > button:hover {
   padding: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
   font-size: 1rem;
   border-radius: 5px;
   background-color: var(--colour-four-dark);

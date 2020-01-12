@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
+import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import meh from "../Resources/meh.png";
 import Sergio from "../Resources/Sergio.png";
 import Alistair from "../Resources/Alistair.png";
@@ -9,11 +10,18 @@ import Zaki from "../Resources/Zaki.jpg";
 import Loading from "../Resources/loading.svg";
 import "../Styling/Home.css";
 import "../Styling/Colours.css";
+import "../Styling/Header.css";
+import NavBarStyleHelper from "../Styling/NavBarStyling.js";
 
 function Home() {
+  const [NavBarStyle, setNavBarStyle] = useState(NavBarStyleHelper(0));
+  useScrollPosition(({ prevPos, currPos }) => {
+    setNavBarStyle(NavBarStyleHelper(currPos.y, window.innerHeight));
+  });
+
   return (
     <div className="App">
-      <div className="Header">
+      <div className="Header" style={NavBarStyle}>
         <div className="Header-Left">
           <Link smooth to="#home" className="HashLink">
             iBlind
