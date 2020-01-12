@@ -14,6 +14,11 @@ import "../Styling/Colours.css";
 import "../Styling/Header.css";
 import NewsContent from "../Data/NewsContent.js";
 import NavBarStyleHelper from "../Styling/NavBarStyling.js";
+import FrontModule from "../Resources/FrontModule.png";
+import RearModule from "../Resources/RearModule.png";
+import UnitSwitch from "../Resources/UnitSwitch.png";
+import RideMapsWithCamera from "../Resources/RideMapsWithCamera.png";
+import RideSummary from "../Resources/RideSummary.png";
 
 function Home() {
   const [NavBarStyle, setNavBarStyle] = useState(NavBarStyleHelper(0));
@@ -78,8 +83,52 @@ function Home() {
 
 function About() {
   return (
-    <div className="Section" id="about">
-      <h2>About iBlind</h2>
+    <div className="Section About" id="about">
+      <div className="About-Row About-Section">
+        <div className="About-Image">
+          <img src={RearModule} alt="Rear Module" />
+        </div>
+        <div className="About-Content">
+          <h2>Be Safe</h2>
+          <h3>With the iBlind rear module you can bike safer using the built in turning indicator lights and always on red indicator.</h3>
+        </div>
+      </div>
+      <div className="About-Row-Reverse About-Section">
+        <div className="About-Image">
+          <img src={FrontModule} alt="Rear Module" />
+        </div>
+        <div className="About-Content">
+          <h2>Be Aware</h2>
+          <h3>With the iBlind front module you can be more ware of your surroundings. The cameras built into the rear module allow the red indicators to notify you of rear approaching vehicles.</h3>
+        </div>
+      </div>
+      <div className="About-Row About-Section">
+        <div className="About-Image">
+          <img src={UnitSwitch} alt="Rear Module" />
+        </div>
+        <div className="About-Content">
+          <h2>Be In Control</h2>
+          <h3>The iBlind turn signal switch allows you to gain total control over your ride by allowing you to actively signal turns without taking your hands off the handles.</h3>
+        </div>
+      </div>
+      <div className="About-Row-Reverse About-Section">
+        <div className="About-Image">
+          <img src={RideMapsWithCamera} alt="Rear Module" />
+        </div>
+        <div className="About-Content">
+          <h2>Maximise Usability</h2>
+          <h3>With the iBlind companion app you can maximise iBlind's usability by allowing you to directly access the rear camera while simultaneously allow you to use your phone for navigation.</h3>
+        </div>
+      </div>
+      <div className="About-Row About-Section">
+        <div className="About-Image">
+          <img src={RideSummary} alt="Rear Module" />
+        </div>
+        <div className="About-Content">
+          <h2>Maximise Potential</h2>
+          <h3>The iBlind companion app tracks your riding statistics allowing you to actively analyze and improve your cycling.</h3>
+        </div>
+      </div>
     </div>
   );
 }
@@ -87,7 +136,7 @@ function About() {
 function Team() {
   return (
     <div className="Section" id="team">
-      <h2>Team</h2>
+      <h2>The iBlind Team</h2>
       <div className="Team">
         <div className="Team-Member">
           <img src={Alistair} alt="Alistair Fink Profile" />
@@ -102,7 +151,7 @@ function Team() {
         <div className="Team-Member">
           <img src={Sergio} alt="Sergio Rodriguez Profile" />
           <h3>Sergio Rodriguez</h3>
-          <h4>Electrical Engineer</h4>
+          <h4>Electrical Engineer(?)</h4>
         </div>
         <div className="Team-Member">
           <img src={Skye} alt="Skye HoSue Profile" />

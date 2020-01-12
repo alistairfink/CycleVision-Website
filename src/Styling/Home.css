@@ -62,7 +62,53 @@ a:hover {
 .Section > h2 {
   font-size: 2rem;
   padding-bottom: 40px;
-  padding-top: 80px;
+  padding-top: 50px;
+}
+
+.About {
+  padding-top: 100px;
+}
+
+.About-Section {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  padding-bottom: 100px;
+}
+
+.About-Row {
+  flex-direction: row;
+}
+
+.About-Row-Reverse {
+  flex-direction: row-reverse;
+}
+
+.About-Image {
+  flex: 1;
+}
+
+.About-Image > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.About-Content {
+  flex: 2;
+  text-align: left;
+}
+
+.About-Content > h2 {
+  font-size: 3rem;
+  margin-left: 50px;
+}
+
+.About-Content > h3 {
+  font-size: 1.1rem;
+  margin-left: 50px;
+  opacity: 0.65;
 }
 
 .Team {
@@ -70,7 +116,7 @@ a:hover {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  padding-bottom: 80px;
+  padding-bottom: 150px;
 }
 
 .Team-Member {
@@ -200,6 +246,7 @@ a:hover {
 }
 
 .Contact {
+  padding-top: 100px;
   padding-bottom: 150px;
 }
 
