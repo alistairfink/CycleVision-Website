@@ -11,8 +11,8 @@
   position: fixed;
   top: 0px;
   font-weight: bold;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .Header-Left {
@@ -37,13 +37,48 @@
 }
 
 .Footer {
+  display: flex;
+  justify-content: center;
   background-color: white;
   padding: 15px;
+  padding-bottom: 0px;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .Footer > a {
+  margin-bottom: 15px;
   margin-right: 15px;
   margin-left: 15px;
   color: grey;
+}
+
+@media screen and (max-width: 641px) {
+  .Header-Left {
+    margin-left: 0px;
+  }
+
+  .Header-Right {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .Header-Left {
+    margin-left: 20px;
+  }
+
+  .Header-Right {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .Header-Left {
+    margin-left: 15vw;
+  }
+
+  .Header-Right {
+    margin-right: 15vw;
+  }
 }

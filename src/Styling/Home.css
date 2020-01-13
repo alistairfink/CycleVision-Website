@@ -73,8 +73,6 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   flex: 0;
-  margin-left: 20vw;
-  margin-right: 20vw;
   padding-bottom: 100px;
 }
 
@@ -87,7 +85,6 @@ a:hover {
 }
 
 .About-Image {
-  flex: 1;
 }
 
 .About-Image > img {
@@ -96,7 +93,6 @@ a:hover {
 }
 
 .About-Content {
-  flex: 2;
   text-align: left;
 }
 
@@ -158,24 +154,25 @@ a:hover {
 
 .LatestNews-Left {
   flex: 1;
-  margin-left: 30vw;
 }
 
 .LatestNews-Left > img {
-  height: 100%;
+  width: 200px;
 }
 
 .LatestNews-Right {
   flex: 1;
   text-align: left;
-  margin-right: 30vw;
+  margin-left: 20px;
 }
 
 .LatestNews-Right > h2 {
+  color: var(--colour-two);
   font-size: 2rem;
 }
 
 .LatestNews-Right > h3 {
+  color: var(--colour-two);
   font-size: 1.3rem;
 }
 
@@ -212,8 +209,6 @@ a:hover {
 .Contact-Field {
   display: flex;
   flex-direction: column;
-  margin-left: 30vw;
-  margin-right: 30vw;
   justify-content: flex-start;
   margin-top: 0px;
 }
@@ -296,4 +291,108 @@ a:hover {
 
 .Contact-Loading {
   width: 60px;
+}
+
+@media screen and (max-width: 641px) {
+  .About-Section {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .Contact-Field {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .LatestNews-Left {
+    margin-left: 20px;
+  }
+
+  .LatestNews-Right {
+    margin-right: 20px;
+  }
+
+  .LatestNews {
+    flex-direction: column;
+  }
+
+  .LatestNews-Left {
+    display: none;
+  }
+
+  .About-Row {
+    flex-direction: column;
+  }
+
+  .About-Row-Reverse {
+    flex-direction: column;
+  }
+
+  .About-Image {
+    margin-bottom: 10px;
+  }
+
+  .About-Image > img {
+    max-width: 60vw;
+    max-height: 100vw;
+  }
+
+  .About-Content {
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .About-Section {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .Contact-Field {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .LatestNews-Left {
+    margin-left: 50px;
+  }
+
+  .LatestNews-Right {
+    margin-right: 50px;
+  }
+
+  .About-Image {
+    flex: 2;
+  }
+
+  .About-Content {
+    flex: 5;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .About-Section {
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+
+  .Contact-Field {
+    margin-left: 30vw;
+    margin-right: 30vw;
+  }
+
+  .LatestNews-Left {
+    margin-left: 30vw;
+  }
+
+  .LatestNews-Right {
+    margin-right: 30vw;
+  }
+
+  .About-Image {
+    flex: 2;
+  }
+
+  .About-Content {
+    flex: 5;
+  }
 }
