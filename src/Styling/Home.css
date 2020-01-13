@@ -91,7 +91,7 @@ a:hover {
 }
 
 .About-Image > img {
-  max-width: 100%;
+  max-width: 80%;
   max-height: 100%;
 }
 
@@ -103,11 +103,13 @@ a:hover {
 .About-Content > h2 {
   font-size: 3rem;
   margin-left: 50px;
+  margin-right: 50px;
 }
 
 .About-Content > h3 {
   font-size: 1.1rem;
   margin-left: 50px;
+  margin-right: 50px;
   opacity: 0.65;
 }
 
