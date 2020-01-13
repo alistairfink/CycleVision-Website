@@ -81,6 +81,11 @@
 	.News-Right > img {
 		max-width: 90%;
 	}
+
+	.News-Right {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
 }
 
 @media screen and (min-width: 641px) {
