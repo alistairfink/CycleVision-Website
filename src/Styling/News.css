@@ -12,14 +12,9 @@
 
 .News-Body {
 	background-color: var(--colour-two);
-	height: 2000px;
 }
 
 .News {
-}
-
-.News-Date {
-}
-
-.News-Content {
+	display: flex;
+	flex-direction: row;
 }

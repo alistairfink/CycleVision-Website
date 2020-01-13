@@ -35,14 +35,14 @@ function News() {
 			</div>
 			<div className="News-Body">
 				{NewsContent.map((post, index) => (
-					<NewsPost Post={post} key={index}/>
+					<NewsPost Post={post} key={index} />
 				))}
 			</div>
 			<div className="Footer">
-        <Link to="/" className="HashLink">
-          Home
-        </Link>
-      </div>
+				<Link to="/" className="HashLink">
+					Home
+				</Link>
+			</div>
 		</div>
 	);
 }
@@ -63,21 +63,46 @@ function NewsPost({ Post }) {
 		"Dec."
 	];
 
+	let renderContent = () => {
+		let jsx = [];
+		let prev = 0;
+		for (let i = 0; i < Post.Content.length; i++) {
+			if (Post.Content[i] === "{") {
+				jsx.push(addParagraph(Post.Content.substring(prev, i)));
+				let j = i;
+				for (; j < Post.Content.length && Post.Content[j] !== "}"; j++) {}
+				jsx.push(addImage(Post.Content.substring(i + 1, j)));
+				prev = j + 1;
+				i = j
+			}
+		}
+
+		jsx.push(addParagraph(Post.Content.substring(prev, Post.Content.length)));
+		return jsx;
+	};
+
+	let addParagraph = text => {
+		console.log(text)
+		return <p>{text}</p>;
+	};
+
+	let addImage = imageIndex => {
+		console.log(imageIndex)
+		return (
+			<img
+				alt={Post.Title + " Image " + imageIndex}
+				src={Post.Images[imageIndex]}
+			/>
+		);
+	};
+
 	return (
 		<div className="News">
-			<div>
+			<div className="News-Left"></div>
+			<div className="News-Right">
 				<h1>{Post.Title}</h1>
-				<p>{Post.Content}</p>
-				<p>
-					{Months[Post.Date.getMonth()] +
-						" " +
-						Post.Date.getDate() +
-						", " +
-						Post.Date.getFullYear()}
-				</p>
+				<p>{renderContent()}</p>
 			</div>
-			<div className="News-Date"></div>
-			<div className="News-Content;"></div>
 		</div>
 	);
 }
