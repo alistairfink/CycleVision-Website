@@ -16,7 +16,7 @@
 }
 
 .Header-Left {
-  margin-left: 100px;
+  margin-left: 20vw;
 }
 
 .Header-Left > a {
@@ -24,7 +24,7 @@
 }
 
 .Header-Right {
-  margin-right: 100px;
+  margin-right: 20vw;
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;

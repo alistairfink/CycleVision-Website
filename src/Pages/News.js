@@ -35,7 +35,11 @@ function News() {
 			</div>
 			<div className="News-Body">
 				{NewsContent.map((post, index) => (
-					<NewsPost Post={post} key={index} />
+					<NewsPost
+						Post={post}
+						IsLast={index === NewsContent.length - 1}
+						key={index}
+					/>
 				))}
 			</div>
 			<div className="Footer">
@@ -47,7 +51,7 @@ function News() {
 	);
 }
 
-function NewsPost({ Post }) {
+function NewsPost({ Post, IsLast }) {
 	const Months = [
 		"Jan.",
 		"Feb.",
@@ -66,18 +70,23 @@ function NewsPost({ Post }) {
 	let renderContent = () => {
 		let jsx = [];
 		let prev = 0;
+		let contentCounter = 0;
 		for (let i = 0; i < Post.Content.length; i++) {
 			if (Post.Content[i] === "{") {
-				jsx.push(addParagraph(Post.Content.substring(prev, i), prev));
+				jsx.push(addParagraph(Post.Content.substring(prev, i), contentCounter));
+				contentCounter++;
 				let j = i;
 				for (; j < Post.Content.length && Post.Content[j] !== "}"; j++) {}
-				jsx.push(addImage(Post.Content.substring(i + 1, j), i));
+				jsx.push(addImage(Post.Content.substring(i + 1, j), contentCounter));
 				prev = j + 1;
 				i = j;
+				contentCounter++;
 			}
 		}
 
-		jsx.push(addParagraph(Post.Content.substring(prev, Post.Content.length), prev));
+		jsx.push(
+			addParagraph(Post.Content.substring(prev, Post.Content.length), contentCounter)
+		);
 		return jsx;
 	};
 
@@ -95,9 +104,24 @@ function NewsPost({ Post }) {
 		);
 	};
 
+	let getDate = () => {
+		return (
+			Months[Post.Date.getMonth()] +
+			" " +
+			Post.Date.getDate() +
+			", " +
+			Post.Date.getFullYear()
+		);
+	};
+
 	return (
 		<div className="News">
-			<div className="News-Left"></div>
+			<div className="News-Left">
+				<div className="News-Left-Date">
+					<p>{getDate()}</p>
+				</div>
+				{!IsLast && <div className="News-Left-Line"></div>}
+			</div>
 			<div className="News-Right">
 				<h1>{Post.Title}</h1>
 				{renderContent()}
