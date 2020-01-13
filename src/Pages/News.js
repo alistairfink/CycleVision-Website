@@ -68,28 +68,27 @@ function NewsPost({ Post }) {
 		let prev = 0;
 		for (let i = 0; i < Post.Content.length; i++) {
 			if (Post.Content[i] === "{") {
-				jsx.push(addParagraph(Post.Content.substring(prev, i)));
+				jsx.push(addParagraph(Post.Content.substring(prev, i), prev));
 				let j = i;
 				for (; j < Post.Content.length && Post.Content[j] !== "}"; j++) {}
-				jsx.push(addImage(Post.Content.substring(i + 1, j)));
+				jsx.push(addImage(Post.Content.substring(i + 1, j), i));
 				prev = j + 1;
-				i = j
+				i = j;
 			}
 		}
 
-		jsx.push(addParagraph(Post.Content.substring(prev, Post.Content.length)));
+		jsx.push(addParagraph(Post.Content.substring(prev, Post.Content.length), prev));
 		return jsx;
 	};
 
-	let addParagraph = text => {
-		console.log(text)
-		return <p>{text}</p>;
+	let addParagraph = (text, index) => {
+		return <p key={Post.Title + " Content Index " + index}>{text}</p>;
 	};
 
-	let addImage = imageIndex => {
-		console.log(imageIndex)
+	let addImage = (imageIndex, index) => {
 		return (
 			<img
+				key={Post.Title + " Content Index " + index}
 				alt={Post.Title + " Image " + imageIndex}
 				src={Post.Images[imageIndex]}
 			/>
@@ -101,7 +100,7 @@ function NewsPost({ Post }) {
 			<div className="News-Left"></div>
 			<div className="News-Right">
 				<h1>{Post.Title}</h1>
-				<p>{renderContent()}</p>
+				{renderContent()}
 			</div>
 		</div>
 	);
