@@ -1,19 +1,40 @@
+// Libraries
 import React, { useState, useRef, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
+
+// Resoures
+import HamburgerMenu from "../Resources/Hamburger.png";
+import HamburgerMenuClose from "../Resources/CloseMenu.png";
+
+// CSS
 import "../Styling/News.css";
 import "../Styling/Universal.css";
 import "../Styling/Colours.css";
+
+// JS
 import NewsContent from "../Data/NewsContent.js";
 import NavBarStyleHelper from "../Styling/NavBarStyling.js";
+import UseWindowDimensions from "../Data/WindowDimensions.js";
 
 function News() {
 	const [NavBarStyle, setNavBarStyle] = useState(NavBarStyleHelper(0));
 	const NewsHeader = useRef(null);
+	const { width } = UseWindowDimensions();
+	const [IsSmallScreen, setSmallScreen] = useState(false);
+	const [MenuOpen, setMenuOpen] = useState(false);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
+
+	useEffect(() => {
+		if (width <= 641) {
+			setSmallScreen(true);
+		} else {
+			setSmallScreen(false);
+		}
+	});
 
 	useScrollPosition(({ prevPos, currPos }) => {
 		setNavBarStyle(
@@ -23,13 +44,47 @@ function News() {
 
 	return (
 		<div>
-			<div className="Header" style={NavBarStyle}>
-				<div className="Header-Left">
-					<Link to="/" className="HashLink">
-						Home
-					</Link>
+			{!IsSmallScreen ? (
+				<div className="Header" style={NavBarStyle}>
+					<div className="Header-Left">
+						<Link to="/" className="HashLink">
+							Home
+						</Link>
+					</div>
 				</div>
-			</div>
+			) : (
+				<div>
+					<img
+						className="Header-HamburgerMenu"
+						src={HamburgerMenu}
+						alt="Menu"
+						onClick={() => {
+							setMenuOpen(true);
+						}}
+					/>
+					{MenuOpen && (
+						<div className="Header-HamburgerMenuExpanded">
+							<img
+								className="Header-HamburgerMenuExpanded-X"
+								src={HamburgerMenuClose}
+								alt="Close Menu"
+								onClick={() => {
+									setMenuOpen(false);
+								}}
+							/>
+							<Link
+								to="/"
+								className="Header-HamburgerMenuLink"
+								onClick={() => {
+									setMenuOpen(false);
+								}}
+							>
+								Home
+							</Link>
+						</div>
+					)}
+				</div>
+			)}
 			<div ref={NewsHeader} className="News-Header">
 				<h1>News</h1>
 			</div>
@@ -85,7 +140,10 @@ function NewsPost({ Post, IsLast }) {
 		}
 
 		jsx.push(
-			addParagraph(Post.Content.substring(prev, Post.Content.length), contentCounter)
+			addParagraph(
+				Post.Content.substring(prev, Post.Content.length),
+				contentCounter
+			)
 		);
 		return jsx;
 	};

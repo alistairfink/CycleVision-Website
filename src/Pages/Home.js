@@ -1,6 +1,9 @@
+// Libraries
 import React, { useState, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
+
+// Resources
 import meh from "../Resources/meh.png";
 import Sergio from "../Resources/Sergio.png";
 import Alistair from "../Resources/Alistair.png";
@@ -9,23 +12,41 @@ import Skye from "../Resources/Skye.jpg";
 import Zaki from "../Resources/Zaki.jpg";
 import Loading from "../Resources/loading.svg";
 import NewsIcon from "../Resources/NewsIcon-Transparent.png";
-import "../Styling/Home.css";
-import "../Styling/Colours.css";
-import "../Styling/Universal.css";
-import NewsContent from "../Data/NewsContent.js";
-import NavBarStyleHelper from "../Styling/NavBarStyling.js";
 import FrontModule from "../Resources/FrontModule.png";
 import RearModule from "../Resources/RearModule.png";
 import UnitSwitch from "../Resources/UnitSwitch.png";
 import RideMapsWithCamera from "../Resources/RideMapsWithCamera.png";
 import RideSummary from "../Resources/RideSummary.png";
+import HamburgerMenu from "../Resources/Hamburger.png";
+import HamburgerMenuClose from "../Resources/CloseMenu.png";
+
+// CSS
+import "../Styling/Home.css";
+import "../Styling/Colours.css";
+import "../Styling/Universal.css";
+
+// JS
+import NewsContent from "../Data/NewsContent.js";
+import NavBarStyleHelper from "../Styling/NavBarStyling.js";
+import UseWindowDimensions from "../Data/WindowDimensions.js";
 
 function Home() {
   const [NavBarStyle, setNavBarStyle] = useState(NavBarStyleHelper(0));
+  const { width } = UseWindowDimensions();
+  const [IsSmallScreen, setSmallScreen] = useState(false);
+  const [MenuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    if (width <= 641) {
+      setSmallScreen(true);
+    } else {
+      setSmallScreen(false);
+    }
+  });
 
   useScrollPosition(({ prevPos, currPos }) => {
     setNavBarStyle(NavBarStyleHelper(currPos.y, window.innerHeight));
@@ -33,27 +54,101 @@ function Home() {
 
   return (
     <div className="App">
-      <div className="Header" style={NavBarStyle}>
-        <div className="Header-Left">
-          <Link smooth to="#home" className="HashLink">
-            iBlind
-          </Link>
+      {!IsSmallScreen ? (
+        <div className="Header" style={NavBarStyle}>
+          <div className="Header-Left">
+            <Link smooth to="#home" className="HashLink">
+              iBlind
+            </Link>
+          </div>
+          <div className="Header-Right">
+            <Link smooth to="#about" className="HashLink">
+              About
+            </Link>
+            <Link smooth to="#team" className="HashLink">
+              Team
+            </Link>
+            <Link smooth to="#contact" className="HashLink">
+              Contact
+            </Link>
+            <Link to="/news" className="HashLink">
+              News
+            </Link>
+          </div>
         </div>
-        <div className="Header-Right">
-          <Link smooth to="#about" className="HashLink">
-            About
-          </Link>
-          <Link smooth to="#team" className="HashLink">
-            Team
-          </Link>
-          <Link smooth to="#contact" className="HashLink">
-            Contact
-          </Link>
-          <Link to="/news" className="HashLink">
-            News
-          </Link>
+      ) : (
+        <div>
+          <img
+            className="Header-HamburgerMenu"
+            src={HamburgerMenu}
+            alt="Menu"
+            onClick={() => {
+              setMenuOpen(true);
+            }}
+          />
+          {MenuOpen && (
+            <div className="Header-HamburgerMenuExpanded">
+              <img
+                className="Header-HamburgerMenuExpanded-X"
+                src={HamburgerMenuClose}
+                alt="Close Menu"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              />
+              <Link
+                smooth
+                to="#home"
+                className="Header-HamburgerMenuLink"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
+                Top
+              </Link>
+              <Link
+                smooth
+                to="#about"
+                className="Header-HamburgerMenuLink"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
+                About
+              </Link>
+              <Link
+                smooth
+                to="#team"
+                className="Header-HamburgerMenuLink"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
+                Team
+              </Link>
+              <Link
+                smooth
+                to="#contact"
+                className="Header-HamburgerMenuLink"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
+                Contact
+              </Link>
+              <Link
+                to="/news"
+                className="Header-HamburgerMenuLink"
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
+                News
+              </Link>
+            </div>
+          )}
         </div>
-      </div>
+      )}
       <div className="Top" id="home">
         <div className="Top-Inner">
           <h1>iBlind</h1>
@@ -198,8 +293,8 @@ function LatestNews() {
         <img src={NewsIcon} alt="Latest News" />
       </div>
       <div className="LatestNews-Right">
-        <h2>Latest News</h2>
-        <h3>{NewsContent[0].Title}</h3>
+        <h3>Latest News</h3>
+        <h2>{NewsContent[0].Title}</h2>
         <Link to="/news" className="LatestNews-Button">
           All News
         </Link>
