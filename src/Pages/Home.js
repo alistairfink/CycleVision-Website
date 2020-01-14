@@ -231,7 +231,7 @@ function About() {
           <h3>
             With the iBlind companion app you can maximise iBlind's usability by
             allowing you to directly access the rear camera while simultaneously
-            allow you to use your phone for navigation.
+            allowing you to use your phone for navigation.
           </h3>
         </div>
       </div>
