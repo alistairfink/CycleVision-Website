@@ -5,7 +5,7 @@ import News from "./News.js";
 
 function App() {
 	return (
-		<Router basename="/iblind">
+		<Router basename="/">
 			<div>
 				<Route exact path="/" component={Home} />
 				<Route exact path="/news" component={News} />

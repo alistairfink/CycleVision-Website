@@ -4,7 +4,6 @@ import { HashLink as Link } from "react-router-hash-link";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 // Resources
-import meh from "../Resources/meh.png";
 import Sergio from "../Resources/Sergio.png";
 import Alistair from "../Resources/Alistair.png";
 import Elijah from "../Resources/Elijah.jpg";
@@ -190,8 +189,8 @@ function About() {
         <div className="About-Content">
           <h2>Be Safe</h2>
           <h3>
-            With the CycleVision rear module you can bike safer using the built in
-            turning indicator lights and always on red indicator.
+            With the CycleVision rear module you can bike safer using the built
+            in turning indicator lights and always on red indicator.
           </h3>
         </div>
       </div>
@@ -215,9 +214,9 @@ function About() {
         <div className="About-Content">
           <h2>Be In Control</h2>
           <h3>
-            The CycleVision turn signal switch allows you to gain total control over
-            your ride by allowing you to actively signal turns without taking
-            your hands off the handles.
+            The CycleVision turn signal switch allows you to gain total control
+            over your ride by allowing you to actively signal turns without
+            taking your hands off the handles.
           </h3>
         </div>
       </div>
@@ -228,9 +227,9 @@ function About() {
         <div className="About-Content">
           <h2>Maximise Usability</h2>
           <h3>
-            With the CycleVision companion app you can maximise CycleVision's usability by
-            allowing you to directly access the rear camera while simultaneously
-            allowing you to use your phone for navigation.
+            With the CycleVision companion app you can maximise CycleVision's
+            usability by allowing you to directly access the rear camera while
+            simultaneously allowing you to use your phone for navigation.
           </h3>
         </div>
       </div>
@@ -241,8 +240,8 @@ function About() {
         <div className="About-Content">
           <h2>Maximise Potential</h2>
           <h3>
-            The CycleVision companion app tracks your riding statistics allowing you
-            to actively analyze and improve your cycling.
+            The CycleVision companion app tracks your riding statistics allowing
+            you to actively analyze and improve your cycling.
           </h3>
         </div>
       </div>
@@ -268,12 +267,12 @@ function Team() {
         <div className="Team-Member">
           <img src={Sergio} alt="Sergio Rodriguez Profile" />
           <h3>Sergio Rodriguez</h3>
-          <h4>Electrical Engineer(?)</h4>
+          <h4>Electrical Engineer</h4>
         </div>
         <div className="Team-Member">
           <img src={Skye} alt="Skye HoSue Profile" />
           <h3>Skye HoSue</h3>
-          <h4>Mascot</h4>
+          <h4>Software Engineer</h4>
         </div>
         <div className="Team-Member">
           <img src={Zaki} alt="Zaki Ahmed Profile" />

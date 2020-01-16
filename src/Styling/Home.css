@@ -239,7 +239,7 @@ a:hover {
   border-radius: 3px;
   border-style: none;
   font-family: sans-serif;
-  background-color: rgba(255,255,255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .Contact-Field > textarea {
@@ -252,7 +252,7 @@ a:hover {
   border-style: none;
   font-family: sans-serif;
   resize: none;
-  background-color: rgba(255,255,255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .Contact {
