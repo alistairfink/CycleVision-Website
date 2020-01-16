@@ -58,7 +58,7 @@ function Home() {
         <div className="Header" style={NavBarStyle}>
           <div className="Header-Left">
             <Link smooth to="#home" className="HashLink">
-              iBlind
+              CycleVision
             </Link>
           </div>
           <div className="Header-Right">
@@ -151,10 +151,9 @@ function Home() {
       )}
       <div className="Top" id="home">
         <div className="Top-Inner">
-          <h1>iBlind</h1>
+          <h1>CycleVision</h1>
           <h2>A Better Way to Bike</h2>
         </div>
-        <img className="Top-Inner-Img" alt="Top Product" src={meh} />
       </div>
       <About />
       <Team />
@@ -191,7 +190,7 @@ function About() {
         <div className="About-Content">
           <h2>Be Safe</h2>
           <h3>
-            With the iBlind rear module you can bike safer using the built in
+            With the CycleVision rear module you can bike safer using the built in
             turning indicator lights and always on red indicator.
           </h3>
         </div>
@@ -203,7 +202,7 @@ function About() {
         <div className="About-Content">
           <h2>Be Aware</h2>
           <h3>
-            With the iBlind front module you can be more ware of your
+            With the CycleVision front module you can be more ware of your
             surroundings. The cameras built into the rear module allow the red
             indicators to notify you of rear approaching vehicles.
           </h3>
@@ -216,7 +215,7 @@ function About() {
         <div className="About-Content">
           <h2>Be In Control</h2>
           <h3>
-            The iBlind turn signal switch allows you to gain total control over
+            The CycleVision turn signal switch allows you to gain total control over
             your ride by allowing you to actively signal turns without taking
             your hands off the handles.
           </h3>
@@ -229,7 +228,7 @@ function About() {
         <div className="About-Content">
           <h2>Maximise Usability</h2>
           <h3>
-            With the iBlind companion app you can maximise iBlind's usability by
+            With the CycleVision companion app you can maximise CycleVision's usability by
             allowing you to directly access the rear camera while simultaneously
             allowing you to use your phone for navigation.
           </h3>
@@ -242,7 +241,7 @@ function About() {
         <div className="About-Content">
           <h2>Maximise Potential</h2>
           <h3>
-            The iBlind companion app tracks your riding statistics allowing you
+            The CycleVision companion app tracks your riding statistics allowing you
             to actively analyze and improve your cycling.
           </h3>
         </div>
@@ -253,8 +252,8 @@ function About() {
 
 function Team() {
   return (
-    <div className="Section" id="team">
-      <h2>The iBlind Team</h2>
+    <div className="Section Team-Section" id="team">
+      <h2>The CycleVision Team</h2>
       <div className="Team">
         <div className="Team-Member">
           <img src={Alistair} alt="Alistair Fink Profile" />
@@ -328,7 +327,7 @@ function Contact() {
     } else {
       setEmailerLoading(true);
       fetch(
-        "https://us-central1-stoked-flame-246007.cloudfunctions.net/iBlind-Emailer",
+        "https://us-central1-stoked-flame-246007.cloudfunctions.net/CycleVision-Emailer",
         {
           method: "POST",
           body: JSON.stringify({
