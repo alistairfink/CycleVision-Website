@@ -38,12 +38,12 @@ function News() {
 
 	useScrollPosition(({ prevPos, currPos }) => {
 		setNavBarStyle(
-			NavBarStyleHelper(currPos.y, NewsHeader.current.clientHeight/2)
+			NavBarStyleHelper(currPos.y, NewsHeader.current.clientHeight / 2)
 		);
 	});
 
 	return (
-		<div>
+		<div className="News-Outer">
 			{!IsSmallScreen ? (
 				<div className="Header" style={NavBarStyle}>
 					<div className="Header-Left">

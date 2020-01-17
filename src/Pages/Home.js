@@ -4,6 +4,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 // Resources
+import Logo from "../Resources/CycleVisionLogo-white.png";
 import Sergio from "../Resources/Sergio.png";
 import Alistair from "../Resources/Alistair.png";
 import Elijah from "../Resources/Elijah.png";
@@ -150,8 +151,11 @@ function Home() {
       )}
       <div className="Top" id="home">
         <div className="Top-Inner">
-          <h1>CycleVision</h1>
-          <h2>A Better Way to Bike</h2>
+          <img src={Logo} alt="CycleVision Logo" />
+          <div>
+            <h1>CycleVision</h1>
+            <h2>A Better Way to Bike</h2>
+          </div>
         </div>
       </div>
       <About />
