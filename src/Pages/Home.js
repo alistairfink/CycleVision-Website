@@ -6,9 +6,9 @@ import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 // Resources
 import Sergio from "../Resources/Sergio.png";
 import Alistair from "../Resources/Alistair.png";
-import Elijah from "../Resources/Elijah.jpg";
-import Skye from "../Resources/Skye.jpg";
-import Zaki from "../Resources/Zaki.jpg";
+import Elijah from "../Resources/Elijah.png";
+import Skye from "../Resources/Skye.png";
+import Zaki from "../Resources/Zaki.png";
 import Loading from "../Resources/loading.svg";
 import NewsIcon from "../Resources/NewsIcon-Transparent.png";
 import FrontModule from "../Resources/FrontModule.png";

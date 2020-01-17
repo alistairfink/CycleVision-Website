@@ -115,7 +115,8 @@
 	}
 
 	.News-Right > img {
-		max-width: 60%;
+		max-width: 80%;
+		max-height: 500px;
 	}
 }
 
@@ -133,6 +134,7 @@
 	}
 
 	.News-Right > img {
-		max-width: 40%;
+		max-width: 80%;
+		max-height: 500px;
 	}
 }
