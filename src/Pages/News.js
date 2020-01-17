@@ -38,7 +38,7 @@ function News() {
 
 	useScrollPosition(({ prevPos, currPos }) => {
 		setNavBarStyle(
-			NavBarStyleHelper(currPos.y, NewsHeader.current.clientHeight)
+			NavBarStyleHelper(currPos.y, NewsHeader.current.clientHeight/2)
 		);
 	});
 
