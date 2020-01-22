@@ -330,7 +330,7 @@ function Contact() {
     } else {
       setEmailerLoading(true);
       fetch(
-        "https://us-central1-stoked-flame-246007.cloudfunctions.net/CycleVision-Emailer",
+        "https://us-central1-stoked-flame-246007.cloudfunctions.net/iBlind-Emailer",
         {
           method: "POST",
           body: JSON.stringify({
