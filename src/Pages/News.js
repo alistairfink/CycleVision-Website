@@ -89,7 +89,9 @@ function News() {
 				<h1>News</h1>
 			</div>
 			<div className="News-Body">
-				{NewsContent.map((post, index) => (
+				{NewsContent.sort(function(a, b) {
+					return a.Date > b.Date ? -1 : a.Date < b.Date ? 1 : 0;
+				}).map((post, index) => (
 					<NewsPost
 						Post={post}
 						IsLast={index === NewsContent.length - 1}
@@ -145,6 +147,7 @@ function NewsPost({ Post, IsLast }) {
 				contentCounter
 			)
 		);
+
 		return jsx;
 	};
 
