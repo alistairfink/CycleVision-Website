@@ -154,7 +154,7 @@ function Home() {
           <img src={Logo} alt="CycleVision Logo" />
           <div>
             <h1>CycleVision</h1>
-            <h2>A Better Way to Bike</h2>
+            <h2>A Safer Way to Cycle</h2>
           </div>
         </div>
       </div>
