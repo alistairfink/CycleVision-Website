@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c7a051be.chunk.css",
+    "main.js": "/static/js/main.2733d430.chunk.js",
+    "main.js.map": "/static/js/main.2733d430.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.28df3405.js",
+    "runtime-main.js.map": "/static/js/runtime-main.28df3405.js.map",
+    "static/js/2.e8bbffa8.chunk.js": "/static/js/2.e8bbffa8.chunk.js",
+    "static/js/2.e8bbffa8.chunk.js.map": "/static/js/2.e8bbffa8.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.2787dacc72f2c0695f897615438625b6.js": "/precache-manifest.2787dacc72f2c0695f897615438625b6.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.c7a051be.chunk.css.map": "/static/css/main.c7a051be.chunk.css.map",
+    "static/js/2.e8bbffa8.chunk.js.LICENSE": "/static/js/2.e8bbffa8.chunk.js.LICENSE",
+    "static/media/Alistair.png": "/static/media/Alistair.e48b6dd0.png",
+    "static/media/CycleVisionLogo-white.png": "/static/media/CycleVisionLogo-white.e297854c.png",
+    "static/media/Elijah.png": "/static/media/Elijah.ca22c3de.png",
+    "static/media/FrontModule.png": "/static/media/FrontModule.6ce03e47.png",
+    "static/media/News.css": "/static/media/News-BG.15423f9d.jpg",
+    "static/media/RearModule.png": "/static/media/RearModule.d95d3bfe.png",
+    "static/media/RideMapsWithCamera.png": "/static/media/RideMapsWithCamera.8196700a.png",
+    "static/media/RideSummary.png": "/static/media/RideSummary.cb6735b6.png",
+    "static/media/Sergio.png": "/static/media/Sergio.693f5260.png",
+    "static/media/Skye.png": "/static/media/Skye.0051bac8.png",
+    "static/media/Home.css": "/static/media/Top-BG.6c0522b0.jpg",
+    "static/media/UnitSwitch.png": "/static/media/UnitSwitch.10b5d561.png",
+    "static/media/Zaki.png": "/static/media/Zaki.f84460df.png",
+    "static/media/loading.svg": "/static/media/loading.651c2d30.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.28df3405.js",
+    "static/js/2.e8bbffa8.chunk.js",
+    "static/css/main.c7a051be.chunk.css",
+    "static/js/main.2733d430.chunk.js"
+  ]
+}
